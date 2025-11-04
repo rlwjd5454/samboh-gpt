@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 추가 글로벌 스타일 필요 없으면 이대로 둔다 */
+html, body, #root { height: 100%; }
