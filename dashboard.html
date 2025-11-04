@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Samboh Admin</title>
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body class="bg-light">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <img src="./assets/logo.png" alt="Samboh Logo" class="logo-sm" />
+        <h1 class="topbar-title">Samboh Admin 대시보드</h1>
+        <button class="button-outline" id="logoutBtn">로그아웃</button>
+      </div>
+    </header>
+    <main class="page">
+      <section class="panel">
+        <h2>시작 가이드</h2>
+        <ol>
+          <li>이 페이지는 임시 대시보드입니다.</li>
+          <li>좌측 상단 로고와 상단바는 고정입니다.</li>
+          <li>데이터 연동 전까지 정적 파일로 동작합니다.</li>
+        </ol>
+      </section>
+    </main>
+    <script>
+      // 간단한 보호: 비로그인 접근 차단
+      const ok = sessionStorage.getItem("samboh_auth_ok") === "1";
+      if (!ok) { window.location.replace("./index.html"); }
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        sessionStorage.removeItem("samboh_auth_ok");
+        window.location.replace("./index.html");
+      });
+    </script>
+  </body>
+</html>
