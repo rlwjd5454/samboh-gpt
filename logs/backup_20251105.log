@@ -61,3 +61,20 @@ https://github.com/rlwjd5454/samboh-gpt.git
 error: cannot pull with rebase: You have unstaged changes.
 error: Please commit or stash them.
 [AUTO] interval=600s 
+warning: in the working copy of 'logs/backup_20251105.log', LF will be replaced by CRLF the next time Git touches it
+[COMMIT] [AUTO] 2025-11-05 03:43:29 backup 
+[main 6639118] [AUTO] 2025-11-05 03:43:29 backup
+ 1 file changed, 54 insertions(+)
+[PUSH] origin main 
+branch 'main' set up to track 'origin/main'.
+To https://github.com/rlwjd5454/samboh-gpt.git
+   0f50069..6639118  main -> main
+[START] 2025-11-05-¼ö  3:43:54.64 
+C:\Program Files\Git\cmd\git.exe
+ê¸°ì•¼í˜¸
+rlwjd5454@gmail.com
+https://github.com/rlwjd5454/samboh-gpt.git
+6639118193ab414c9a0eb98a25325e2b7ec8f566	refs/heads/main
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+[AUTO] interval=600s 
