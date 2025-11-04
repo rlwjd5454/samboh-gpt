@@ -7,3 +7,57 @@ https://github.com/rlwjd5454/samboh-gpt.git
 error: cannot pull with rebase: You have unstaged changes.
 error: Please commit or stash them.
 [AUTO] interval=600s 
+warning: in the working copy of 'logs/backup_20251105.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'logs/dev_20251105_033840.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/chunk-I4MZPW7S.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/chunk-I4MZPW7S.js.map', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/chunk-XPR23Y44.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/chunk-XPR23Y44.js.map', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react-dom.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react-dom.js.map', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react-dom_client.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react-dom_client.js.map', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react-router-dom.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react-router-dom.js.map', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react.js.map', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react_jsx-dev-runtime.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react_jsx-dev-runtime.js.map', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react_jsx-runtime.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'node_modules/.vite/deps_temp_cf038201/react_jsx-runtime.js.map', LF will be replaced by CRLF the next time Git touches it
+[COMMIT] [AUTO] 2025-11-05 03:39:07 backup 
+[main 0f50069] [AUTO] 2025-11-05 03:39:07 backup
+ 22 files changed, 31620 insertions(+), 44 deletions(-)
+ delete mode 100644 logs/dev_20251105_ 33533.log
+ create mode 100644 logs/dev_20251105_033840.log
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/chunk-I4MZPW7S.js
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/chunk-I4MZPW7S.js.map
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/chunk-XPR23Y44.js
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/chunk-XPR23Y44.js.map
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/package.json
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react-dom.js
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react-dom.js.map
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react-dom_client.js
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react-dom_client.js.map
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react-router-dom.js
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react-router-dom.js.map
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react.js
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react.js.map
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react_jsx-dev-runtime.js
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react_jsx-dev-runtime.js.map
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react_jsx-runtime.js
+ create mode 100644 node_modules/.vite/deps_temp_cf038201/react_jsx-runtime.js.map
+[PUSH] origin main 
+branch 'main' set up to track 'origin/main'.
+To https://github.com/rlwjd5454/samboh-gpt.git
+   164e79d..0f50069  main -> main
+[START] 2025-11-05-¼ö  3:43:28.34 
+C:\Program Files\Git\cmd\git.exe
+ê¸°ì•¼í˜¸
+rlwjd5454@gmail.com
+https://github.com/rlwjd5454/samboh-gpt.git
+0f500693f3ac72761ab6b96ae469f4751e53557a	refs/heads/main
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+[AUTO] interval=600s 
