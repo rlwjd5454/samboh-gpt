@@ -1,0 +1,33 @@
+﻿**********************
+Windows PowerShell 기록 시작
+시작 시간: 20251105034747
+사용자 이름: KH-PC\KH
+RunAs 사용자: KH-PC\KH
+구성 이름: 
+Machine: KH-PC (Microsoft Windows NT 10.0.19045.0)
+호스트 응용 프로그램: powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -Command $ErrorActionPreference='Stop'; $log='C:\samboh-gpt\logs\dev_20251105_034746.log'; Start-Transcript -Path $log -Append | Out-Null; Write-Host '[START]' (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'); Set-Location 'C:\samboh-gpt'; if (Test-Path 'package-lock.json') { Write-Host '[NPM] npm ci'; npm ci } else { Write-Host '[NPM] npm install'; npm install }; Write-Host '[DEV] npm run dev'; npm run dev; Stop-Transcript | Out-Null
+프로세스 ID: 18712
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+[START] 2025-11-05 03:47:47
+[NPM] npm ci
+
+added 214 packages, and audited 215 packages in 4s
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[DEV] npm run dev

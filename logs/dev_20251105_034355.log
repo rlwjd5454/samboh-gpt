@@ -5,3 +5,28 @@ C:\Program Files\nodejs\npm
 C:\Program Files\nodejs\npm.cmd
 [INFO] Node v24.10.0 
 [NPM] npm ci 
+
+added 214 packages, and audited 215 packages in 4s
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[DEV] npm run dev 
+--------------------------------------------- 
+
+> samboh-gpt@1.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m282[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+^C^C

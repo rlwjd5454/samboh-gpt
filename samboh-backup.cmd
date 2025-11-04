@@ -1,73 +1,48 @@
 @echo off
-setlocal ENABLEDELAYEDEXPANSION
+setlocal
 
-rem ===== settings =====
 set "REPO_DIR=C:\samboh-gpt"
 set "GIT_REMOTE_URL=https://github.com/rlwjd5454/samboh-gpt.git"
 set "BRANCH=main"
 set "INTERVAL_SEC=600"
 set "LOG_DIR=%REPO_DIR%\logs"
-
 if not exist "%LOG_DIR%" mkdir "%LOG_DIR%"
 
-rem ---- daily log name (YYYYMMDD) ----
 for /f %%i in ('wmic os get localdatetime ^| find "."') do set "DT=%%i"
-set "YYYY=%DT:~0,4%"
-set "MM=%DT:~4,2%"
-set "DD=%DT:~6,2%"
-set "LOG_FILE=%LOG_DIR%\backup_%YYYY%%MM%%DD%.log"
+set "DAYSTAMP=%DT:~0,4%%DT:~4,2%%DT:~6,2%"
+set "LOG_FILE=%LOG_DIR%\backup_%DAYSTAMP%.log"
 
-title Samboh Auto Backup
-echo [START] %date% %time% >>"%LOG_FILE%"
+where git >nul 2>&1 || (echo [ERROR] git 미설치. https://git-scm.com & pause & exit /b 1)
 
-where git >>"%LOG_FILE%" 2>&1 || (echo [ERROR] git missing >>"%LOG_FILE%" & goto END)
-cd /d "%REPO_DIR%" >>"%LOG_FILE%" 2>&1 || (echo [ERROR] repo path missing >>"%LOG_FILE%" & goto END)
+powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -Command ^
+  "$ErrorActionPreference='Stop';" ^
+  "$log='%LOG_FILE%';" ^
+  "Start-Transcript -Path $log -Append | Out-Null;" ^
+  "Write-Host ('[START] ' + (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'));" ^
+  "Set-Location '%REPO_DIR%';" ^
+  "git config --global --add safe.directory '%REPO_DIR%' | Out-Null;" ^
+  "if (-not (Test-Path '.git')) { Write-Host '[INIT] git init'; git init | Out-Null };" ^
+  "$curbr = (git symbolic-ref --short -q HEAD 2>$null); if (-not $curbr -or $curbr -ne '%BRANCH%') { git checkout -B '%BRANCH%' | Out-Null };" ^
+  "if (-not (git remote 2>$null | Select-String -Quiet '^origin$')) { Write-Host '[INIT] add origin'; git remote add origin '%GIT_REMOTE_URL%' | Out-Null };" ^
+  "if (git ls-remote --heads origin 2>$null) { try { git pull --rebase origin '%BRANCH%' } catch { Write-Host '[WARN] pull skipped:' $_.Exception.Message } };" ^
+  "while ($true) {" ^
+  "  git add -A | Out-Null;" ^
+  "  git diff --cached --quiet; $changed = -not ($LASTEXITCODE -eq 0);" ^
+  "  if (-not $changed) {" ^
+  "    Write-Host ('[INFO] no changes at ' + (Get-Date -Format 'HH:mm:ss'));" ^
+  "    Start-Sleep -Seconds %INTERVAL_SEC%;" ^
+  "    continue;" ^
+  "  }" ^
+  "  $ts = Get-Date -Format 'yyyy-MM-dd HH:mm:ss';" ^
+  "  $msg = \"[AUTO] $ts backup\";" ^
+  "  Write-Host ('[COMMIT] ' + $msg);" ^
+  "  git commit -m $msg | Out-Null;" ^
+  "  Write-Host '[PUSH] origin %BRANCH%';" ^
+  "  try { git push -u origin '%BRANCH%' } catch { Write-Host '[ERROR] push failed:' $_.Exception.Message };" ^
+  "  Start-Sleep -Seconds %INTERVAL_SEC%;" ^
+  "}" ^
+  "Stop-Transcript | Out-Null"
 
-git config --global --add safe.directory "%REPO_DIR%" >>"%LOG_FILE%" 2>&1
-git config user.name  >>"%LOG_FILE%" 2>&1 || git config user.name "rlwjd5454" >>"%LOG_FILE%" 2>&1
-git config user.email >>"%LOG_FILE%" 2>&1 || git config user.email "none@example.com" >>"%LOG_FILE%" 2>&1
-
-if not exist ".git" (
-  git init >>"%LOG_FILE%" 2>&1 || goto END
-)
-
-for /f "tokens=*" %%a in ('git symbolic-ref --short -q HEAD 2^>nul') do set "CURBR=%%a"
-if /I not "!CURBR!"=="%BRANCH%" git checkout -B "%BRANCH%" >>"%LOG_FILE%" 2>&1
-
-git remote get-url origin >>"%LOG_FILE%" 2>&1 || git remote add origin "%GIT_REMOTE_URL%" >>"%LOG_FILE%" 2>&1
-git ls-remote --heads origin >>"%LOG_FILE%" 2>&1 && git pull --rebase origin "%BRANCH%" >>"%LOG_FILE%" 2>&1
-
-echo [AUTO] interval=%INTERVAL_SEC%s >>"%LOG_FILE%"
-:loop
-  git add -A >>"%LOG_FILE%" 2>&1
-
-  git diff --cached --quiet
-  if %errorlevel%==0 (
-    for /f %%i in ('wmic os get localdatetime ^| find "."') do set "DT=%%i"
-    set "hh=!DT:~8,2!" & set "nn=!DT:~10,2!" & set "ss=!DT:~12,2!"
-    echo [INFO] no changes at !hh!:!nn!:!ss! >>"%LOG_FILE%"
-    timeout /t %INTERVAL_SEC% /nobreak >nul
-    goto loop
-  )
-
-  for /f %%i in ('wmic os get localdatetime ^| find "."') do set "DT=%%i"
-  set "TS=!DT:~0,4!-!DT:~4,2!-!DT:~6,2! !DT:~8,2!:!DT:~10,2!:!DT:~12,2!"
-  set "MSG=[AUTO] !TS! backup"
-
-  echo [COMMIT] !MSG! >>"%LOG_FILE%"
-  git commit -m "!MSG!" >>"%LOG_FILE%" 2>&1 || goto GIT_ERR
-
-  echo [PUSH] origin %BRANCH% >>"%LOG_FILE%"
-  git push -u origin "%BRANCH%" >>"%LOG_FILE%" 2>&1 || goto GIT_ERR
-
-  timeout /t %INTERVAL_SEC% /nobreak >nul
-  goto loop
-
-:GIT_ERR
-echo [ERROR] push failed. Check GitHub auth or remote. >>"%LOG_FILE%"
-goto END
-
-:END
+echo.
 echo [LOG] %LOG_FILE%
-echo Press any key to exit.
-pause >nul
+pause
