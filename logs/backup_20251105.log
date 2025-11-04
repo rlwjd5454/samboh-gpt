@@ -2760,3 +2760,5 @@ PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
 [START] 2025-11-05 03:47:54
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
