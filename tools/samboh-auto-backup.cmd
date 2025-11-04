@@ -19,7 +19,7 @@ if errorlevel 1 (
   exit /b
 )
 
-cd /d "%~dp0"
+cd /d "%~dp0.."
 git rev-parse --is-inside-work-tree >nul 2>&1
 if errorlevel 1 (
   echo [안내] Git 저장소가 없어 초기화 중입니다...
