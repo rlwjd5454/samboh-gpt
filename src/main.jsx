@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import "./index.css";
-import Login from "./Login.jsx";
-import AdminSelect from "./AdminSelect.jsx";
-import SecondaryHome from "./SecondaryHome.jsx";
-import ElementaryHome from "./ElementaryHome.jsx";
+import Login from "./login.jsx"; // pages 폴더 아님
+import SelectLevel from "./pages/SelectLevel.jsx";
+import SecondaryHome from "./pages/SecondaryHome.jsx";
+import ElementaryHome from "./pages/ElementaryHome.jsx";
 
 function Dashboard() {
   return (
@@ -24,16 +24,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         {/* 로그인 */}
         <Route path="/" element={<Login />} />
 
-        {/* 로그인 성공 */}
+        {/* 로그인 성공 후 과정 선택 */}
+        <Route path="/select" element={<SelectLevel />} />
+
+        {/* 중등/초등 대시보드 */}
+        <Route path="/dashboard/middle" element={<SecondaryHome />} />
+        <Route path="/dashboard/elementary" element={<ElementaryHome />} />
+
+        {/* 기본 페이지 및 리다이렉트 */}
         <Route path="/dashboard" element={<Dashboard />} />
-
-        {/* 관리자 선택 및 섹션 */}
-        <Route path="/admin/select" element={<AdminSelect />} />
-        <Route path="/admin/secondary" element={<SecondaryHome />} />
-        <Route path="/admin/elementary" element={<ElementaryHome />} />
-
-        {/* 기본 리다이렉트 / 404 */}
-        <Route path="/admin" element={<Navigate to="/admin/select" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
