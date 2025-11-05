@@ -1,53 +1,54 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import sambohLogo from "/samboh-logo.jpg";
 
 export default function Login() {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
-  const navigate = useNavigate();
+  const nav = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
+
+    // 관리자 계정
     if (id === "samboh" && pw === "5623630") {
-      navigate("/select");
-    } else {
-      alert("잘못된 로그인 정보입니다.");
+      nav("/admin"); // 반드시 소문자 /admin
+      return;
     }
+
+    alert("잘못된 ID 또는 비밀번호입니다.");
   };
 
   return (
-    <main className="flex items-center justify-center min-h-screen bg-blue-100">
-      <div className="bg-white shadow-2xl rounded-2xl p-10 w-96 text-center">
-        <img
-          src={sambohLogo}
-          alt="Samboh Logo"
-          className="w-32 mx-auto mb-6 rounded-full"
+    <div className="min-h-screen bg-blue-100 flex flex-col items-center justify-center">
+      <img src={sambohLogo} alt="Samboh Logo" className="w-24 h-24 mb-4" />
+      <h1 className="text-3xl font-bold mb-6">Samboh</h1>
+
+      <form
+        onSubmit={handleLogin}
+        className="bg-white rounded-2xl shadow-md p-8 w-80 flex flex-col gap-3"
+      >
+        <input
+          type="text"
+          placeholder="ID"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+          className="border rounded-xl p-2"
         />
-        <h1 className="text-2xl font-bold text-blue-700 mb-6">Samboh</h1>
-        <form onSubmit={handleLogin} className="flex flex-col gap-4">
-          <input
-            type="text"
-            placeholder="ID"
-            value={id}
-            onChange={(e) => setId(e.target.value)}
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={pw}
-            onChange={(e) => setPw(e.target.value)}
-            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <button
-            type="submit"
-            className="bg-blue-600 text-white rounded-lg py-2 mt-2 hover:bg-blue-700 transition-all"
-          >
-            로그인
-          </button>
-        </form>
-      </div>
-    </main>
+        <input
+          type="password"
+          placeholder="Password"
+          value={pw}
+          onChange={(e) => setPw(e.target.value)}
+          className="border rounded-xl p-2"
+        />
+        <button
+          type="submit"
+          className="bg-blue-500 text-white rounded-xl py-2 hover:bg-blue-600"
+        >
+          로그인
+        </button>
+      </form>
+    </div>
   );
 }

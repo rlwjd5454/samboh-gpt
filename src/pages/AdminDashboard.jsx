@@ -6,7 +6,9 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
       <div className="w-full max-w-xl space-y-6">
-        <h1 className="text-2xl font-semibold text-slate-900">관리자 대시보드</h1>
+        <h1 className="text-2xl font-semibold text-slate-900 text-center">
+          관리자 대시보드
+        </h1>
 
         <div className="grid grid-cols-1 gap-4">
           <button
