@@ -5,9 +5,17 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="max-w-5xl mx-auto p-6">
-        <header className="py-6">
-          <h1 className="text-2xl font-bold text-slate-900">관리자 대시보드</h1>
-          <p className="text-sm text-slate-500 mt-1">담임 → 반 선택 → 성적 조회 흐름</p>
+        <header className="py-6 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-900">관리자 대시보드</h1>
+            <p className="text-sm text-slate-500 mt-1">담임 → 반 선택 → 성적 조회</p>
+          </div>
+          <button
+            onClick={() => nav("/logout")}
+            className="text-sm px-3 py-1.5 rounded-xl border bg-white hover:bg-slate-50"
+          >
+            로그아웃
+          </button>
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
