@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import sambohLogo from "/samboh-logo.jpg";
 
@@ -7,15 +7,20 @@ export default function Login() {
   const [pw, setPw] = useState("");
   const nav = useNavigate();
 
+  // 이미 로그인되어 있으면 바로 대시보드
+  useEffect(() => {
+    if (localStorage.getItem("auth") === "admin") {
+      nav("/admin", { replace: true });
+    }
+  }, [nav]);
+
   const handleLogin = (e) => {
     e.preventDefault();
-
-    // 관리자 계정
     if (id === "samboh" && pw === "5623630") {
-      nav("/admin"); // 반드시 소문자 /admin
+      localStorage.setItem("auth", "admin"); // ← 인증 플래그 저장
+      nav("/admin", { replace: true });
       return;
     }
-
     alert("잘못된 ID 또는 비밀번호입니다.");
   };
 

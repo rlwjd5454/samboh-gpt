@@ -4,7 +4,13 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login.jsx";
 import AdminDashboard from "./pages/AdminDashboard.jsx";
 import TeacherList from "./pages/TeacherList.jsx";
-import "./index.css"; // Tailwind 스타일 적용
+import ClassList from "./pages/ClassList.jsx";
+import "./index.css";
+
+function RequireAuth({ children }) {
+  const authed = typeof window !== "undefined" && localStorage.getItem("auth") === "admin";
+  return authed ? children : <Navigate to="/login" replace />;
+}
 
 function App() {
   return (
@@ -12,8 +18,33 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/teachers/:division" element={<TeacherList />} />
+
+        {/* 보호 구간 */}
+        <Route
+          path="/admin"
+          element={
+            <RequireAuth>
+              <AdminDashboard />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/teachers/:division"
+          element={
+            <RequireAuth>
+              <TeacherList />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/classes"
+          element={
+            <RequireAuth>
+              <ClassList />
+            </RequireAuth>
+          }
+        />
+
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>
