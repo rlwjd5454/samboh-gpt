@@ -20,5 +20,316 @@
     "박권식",
     "원장님",
     "탁승연"
-  ]
+  ],
+  "classesByTeacher": {
+    "Aria": [
+      {
+        "className": "25 가을[307 Aria] M5 화목 7:30",
+        "level": "M5"
+      },
+      {
+        "className": "25 가을[307 Aria] M6 화목 4:50",
+        "level": "M6"
+      },
+      {
+        "className": "25 가을[307 Aria] M6 월금 7:30",
+        "level": "M6"
+      },
+      {
+        "className": "25 가을[307 Aria] P5 월금 4:50",
+        "level": "P5"
+      }
+    ],
+    "Chloe": [
+      {
+        "className": "25 가을[408 Chloe] P3 화목 7:30",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[408 Chloe] P3 화목 4:50",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[408 Chloe] P3 월금 4:50",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[408 Chloe] P3 월금 7:30",
+        "level": "P3"
+      }
+    ],
+    "Elin": [
+      {
+        "className": "25 가을[403 Elin] P3 화목 4:50",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[403 Elin] P2 월금 4:50",
+        "level": "P2"
+      },
+      {
+        "className": "25 가을[403 Elin] P3 월금 7:30",
+        "level": "P3"
+      }
+    ],
+    "Ella": [
+      {
+        "className": "25 가을[504 Ella] P4 화목 4:50",
+        "level": "P4"
+      },
+      {
+        "className": "25 가을[504 Ella] P4 월금 4:50",
+        "level": "P4"
+      }
+    ],
+    "Ellie": [
+      {
+        "className": "25 가을[304 Ellie] M4 화목 7:30",
+        "level": "M4"
+      },
+      {
+        "className": "25 가을[304 Ellie] M5 화목 4:50",
+        "level": "M5"
+      },
+      {
+        "className": "25 가을[304 Ellie] M4 월금 4:50",
+        "level": "M4"
+      },
+      {
+        "className": "25 가을[304 Ellie] M5 월금 7:30",
+        "level": "M5"
+      }
+    ],
+    "Faye": [
+      {
+        "className": "25 가을[309 Faye] P5 화목 7:30",
+        "level": "P5"
+      },
+      {
+        "className": "25 가을[309 Faye] P5 화목 4:50",
+        "level": "P5"
+      },
+      {
+        "className": "25 가을[309 Faye] P5 월금 4:50",
+        "level": "P5"
+      },
+      {
+        "className": "25 가을[309 Faye] P6 월금 7:30",
+        "level": "P6"
+      }
+    ],
+    "Hannah": [
+      {
+        "className": "25 가을[303 Hannah] P2 화목 7:30",
+        "level": "P2"
+      },
+      {
+        "className": "25 가을[303 Hannah] P2 화목 4:50",
+        "level": "P2"
+      },
+      {
+        "className": "25 가을[303 Hannah] P2 월금 4:50",
+        "level": "P2"
+      },
+      {
+        "className": "25 가을[303 Hannah] M2 월금 7:30",
+        "level": "M2"
+      }
+    ],
+    "Jamie": [
+      {
+        "className": "25 가을[401 Jamie] M6 화목 7:30",
+        "level": "M6"
+      },
+      {
+        "className": "25 가을[401 Jamie] M5 화목 4:50",
+        "level": "M5"
+      },
+      {
+        "className": "25 가을[401 Jamie] M5 월금 4:50",
+        "level": "M5"
+      },
+      {
+        "className": "25 가을[401 Jamie] M6 월금 7:30",
+        "level": "M6"
+      }
+    ],
+    "Jenna": [
+      {
+        "className": "25 가을[308 Jenna] M3 화목 7:30",
+        "level": "M3"
+      },
+      {
+        "className": "25 가을[308 Jenna] M3 화목 4:50",
+        "level": "M3"
+      },
+      {
+        "className": "25 가을[308 Jenna] M3 월금 4:50",
+        "level": "M3"
+      },
+      {
+        "className": "25 가을[308 Jenna] M3 월금 7:30",
+        "level": "M3"
+      }
+    ],
+    "Jenny": [
+      {
+        "className": "25 가을[402 Jenny] P6 화목 7:30",
+        "level": "P6"
+      },
+      {
+        "className": "25 가을[402 Jenny] M4 화목 4:50",
+        "level": "M4"
+      },
+      {
+        "className": "25 가을[402 Jenny] M4 월금 4:50",
+        "level": "M4"
+      },
+      {
+        "className": "25 가을[402 Jenny] M5 월금 7:30",
+        "level": "M5"
+      }
+    ],
+    "Joy": [
+      {
+        "className": "25 가을[306 Joy] P2 화목 4:50",
+        "level": "P2"
+      },
+      {
+        "className": "25 가을[306 Joy] P4 화목 7:30",
+        "level": "P4"
+      },
+      {
+        "className": "25 가을[306 Joy] P4 월금 4:50",
+        "level": "P4"
+      },
+      {
+        "className": "25 가을[306 Joy] P2 월금 7:30",
+        "level": "P2"
+      }
+    ],
+    "Min": [
+      {
+        "className": "25 가을[409 Min] M4 월금 7:30",
+        "level": "M4"
+      }
+    ],
+    "Sally": [
+      {
+        "className": "25 가을[404 Sally] M2 화목 7:30",
+        "level": "M2"
+      },
+      {
+        "className": "25 가을[404 Sally] P3 화목 4:50",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[404 Sally] P3 월금 4:50",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[404 Sally] P3 월금 7:30",
+        "level": "P3"
+      }
+    ],
+    "Sojung": [
+      {
+        "className": "25 가을[410 Sojung] P4 화목 7:30",
+        "level": "P4"
+      },
+      {
+        "className": "25 가을[410 Sojung] P4 화목 4:50",
+        "level": "P4"
+      },
+      {
+        "className": "25 가을[410 Sojung] P4 월금 4:50",
+        "level": "P4"
+      },
+      {
+        "className": "25 가을[410 Sojung] P4 월금 7:30",
+        "level": "P4"
+      }
+    ],
+    "Stacy": [
+      {
+        "className": "25 가을[302 Stacy] M4 화목 7:30",
+        "level": "M4"
+      },
+      {
+        "className": "25 가을[302 Stacy] P4 화목 4:50",
+        "level": "P4"
+      },
+      {
+        "className": "25 가을[302 Stacy] P3 월금 4:50",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[302 Stacy] M4 월금 7:30",
+        "level": "M4"
+      }
+    ],
+    "Sunny": [
+      {
+        "className": "25 가을[305 Sunny] P2 화목 7:30",
+        "level": "P2"
+      },
+      {
+        "className": "25 가을[305 Sunny] P2 화목 4:50",
+        "level": "P2"
+      },
+      {
+        "className": "25 가을[305 Sunny] P1 월금 4:50",
+        "level": "P1"
+      },
+      {
+        "className": "25 가을[305 Sunny] P2 월금 7:30",
+        "level": "P2"
+      }
+    ],
+    "남궁희": [
+      {
+        "className": "25 가을[405 남궁희] P3 화목 7:30",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[405 남궁희] P1 화목 4:50",
+        "level": "P1"
+      },
+      {
+        "className": "25 가을[405 남궁희] P3 월금 4:50",
+        "level": "P3"
+      },
+      {
+        "className": "25 가을[405 남궁희] P1 월금 7:30",
+        "level": "P1"
+      }
+    ],
+    "박권식": [
+      {
+        "className": "25 가을[404 박권식] M4+ 토 9:30",
+        "level": "M4+"
+      }
+    ],
+    "원장님": [
+      {
+        "className": "25 가을[407 원장직강] M5+ 토 9:30",
+        "level": "M5+"
+      },
+      {
+        "className": "25 가을[501 원장직강] M6+ 토 9:30",
+        "level": "M6+"
+      }
+    ],
+    "탁승연": [
+      {
+        "className": "25 가을[511 탁승연] M3+ 토 9:30",
+        "level": "M3+"
+      },
+      {
+        "className": "25 가을[511 탁승연] M3+ 토 2:00",
+        "level": "M3+"
+      }
+    ]
+  },
+  "source_sheet": "2510중등전체명단"
 }

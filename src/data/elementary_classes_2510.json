@@ -8,5 +8,265 @@
     "Mina",
     "Olivia",
     "탁승연"
-  ]
+  ],
+  "classesByTeacher": {
+    "Danielle": [
+      {
+        "className": "25 가을 [508 Danielle] G3 화 4:00",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [508 Danielle] R2 금 4:00",
+        "level": "R2"
+      },
+      {
+        "className": "25 가을 [508 Danielle] R4 목 4:00",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [508 Danielle] G2 월 4:00",
+        "level": "G2"
+      },
+      {
+        "className": "25 가을 [508 Danielle] G2 월 6:40",
+        "level": "G2"
+      },
+      {
+        "className": "25 가을 [508 Danielle] R4 금 6:40",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [508 Danielle] R4 목 6:40",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [508 Danielle] G2 화 6:40",
+        "level": "G2"
+      }
+    ],
+    "Dasom": [
+      {
+        "className": "25 가을 [506 Dasom] R5 목 6:40",
+        "level": "R5"
+      },
+      {
+        "className": "25 가을 [506 Dasom] R5 금 6:40",
+        "level": "R5"
+      },
+      {
+        "className": "25 가을 [506 Dasom] G3 화 4:00",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [506 Dasom] R3 금 4:00",
+        "level": "R3"
+      },
+      {
+        "className": "25 가을 [506 Dasom] G5 화 6:40",
+        "level": "G5"
+      },
+      {
+        "className": "25 가을 [506 Dasom] R5 목 4:00",
+        "level": "R5"
+      },
+      {
+        "className": "25 가을 [506 Dasom] G3 월 4:00",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [506 Dasom] G3 월 6:40",
+        "level": "G3"
+      }
+    ],
+    "Judy": [
+      {
+        "className": "25 가을 [512 Judy] R3 금 4:00",
+        "level": "R3"
+      },
+      {
+        "className": "25 가을 [512 Judy] G2 화 4:00",
+        "level": "G2"
+      },
+      {
+        "className": "25 가을 [512 Judy] G3 월 6:40",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [512 Judy] R2 목 4:00",
+        "level": "R2"
+      },
+      {
+        "className": "25 가을 [512 Judy] G3 화 6:40",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [512 Judy] R3 금 6:40",
+        "level": "R3"
+      },
+      {
+        "className": "25 가을 [512 Judy] G3 월 4:00",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [512 Judy] R3 목 6:40",
+        "level": "R3"
+      }
+    ],
+    "Layla": [
+      {
+        "className": "25 가을 [301 Layla] G4 화 4:00",
+        "level": "G4"
+      },
+      {
+        "className": "25 가을 [301 Layla] G5 화 6:40",
+        "level": "G5"
+      },
+      {
+        "className": "25 가을 [301 Layla] R6 목 6:40",
+        "level": "R6"
+      },
+      {
+        "className": "25 가을 [301 Layla] R4 목 4:00",
+        "level": "R4"
+      }
+    ],
+    "Lina": [
+      {
+        "className": "25 가을 [507 Lina] R4 목 4:00",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [507 Lina] G4 월 6:40",
+        "level": "G4"
+      },
+      {
+        "className": "25 가을 [507 Lina] G2 월 4:00",
+        "level": "G2"
+      },
+      {
+        "className": "25 가을 [507 Lina] R3 목 6:40",
+        "level": "R3"
+      },
+      {
+        "className": "25 가을 [507 Lina] G4 화 6:40",
+        "level": "G4"
+      },
+      {
+        "className": "25 가을 [507 Lina] R3 금 4:00",
+        "level": "R3"
+      },
+      {
+        "className": "25 가을 [507 Lina] R3 금 6:40",
+        "level": "R3"
+      },
+      {
+        "className": "25 가을 [507 Lina] G2 화 4:00",
+        "level": "G2"
+      }
+    ],
+    "Mina": [
+      {
+        "className": "25 가을 [509 Mina] R2 목 4:00",
+        "level": "R2"
+      },
+      {
+        "className": "25 가을 [509 Mina] R2 금 6:40",
+        "level": "R2"
+      },
+      {
+        "className": "25 가을 [509 Mina] G2 월 4:00",
+        "level": "G2"
+      },
+      {
+        "className": "25 가을 [509 Mina] R2 금 4:00",
+        "level": "R2"
+      },
+      {
+        "className": "25 가을 [509 Mina] G2 월 6:40",
+        "level": "G2"
+      },
+      {
+        "className": "25 가을 [509 Mina] G2 화 4:00",
+        "level": "G2"
+      },
+      {
+        "className": "25 가을 [509 Mina] G2 화 6:40",
+        "level": "G2"
+      },
+      {
+        "className": "25 가을 [509 Mina] R2 목 6:40",
+        "level": "R2"
+      }
+    ],
+    "Olivia": [
+      {
+        "className": "25 가을 [505 Olivia] G4 월 4:00",
+        "level": "G4"
+      },
+      {
+        "className": "25 가을 [505 Olivia] R3 목 4:00",
+        "level": "R3"
+      },
+      {
+        "className": "25 가을 [505 Olivia] G3 화 4:00",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [505 Olivia] R4 금 4:00",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [505 Olivia] G3 화 6:40",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [505 Olivia] R3 목 6:40",
+        "level": "R3"
+      },
+      {
+        "className": "25 가을 [505 Olivia] R4 금 6:40",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [505 Olivia] G3 월 6:40",
+        "level": "G3"
+      }
+    ],
+    "탁승연": [
+      {
+        "className": "25 가을 [511 탁승연] G3 월 4:00",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [511 탁승연] G3 화 6:40",
+        "level": "G3"
+      },
+      {
+        "className": "25 가을 [511 탁승연] G4 화 4:00",
+        "level": "G4"
+      },
+      {
+        "className": "25 가을 [511 탁승연] G4 월 6:40",
+        "level": "G4"
+      },
+      {
+        "className": "25 가을 [511 탁승연] R4 금 6:40",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [511 탁승연] R4 금 4:00",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [511 탁승연] R4 목 6:40",
+        "level": "R4"
+      },
+      {
+        "className": "25 가을 [511 탁승연] R3 목 4:00",
+        "level": "R3"
+      }
+    ]
+  },
+  "source_sheet": "2510초등전체명단",
+  "teacher_assignment": "parsed_from_classname_brackets_or_homeroom_fallback"
 }

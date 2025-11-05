@@ -92,3 +92,99 @@ t.git
    000b9cc..0506495  main -> main
 branch 'main' set up to track 'origin/mai
 n'.
+
+[COMMIT] [AUTO] 2025-11-06 01:43:46 backup
+[PUSH] origin main
+
+
+[COMMIT] [AUTO] 2025-11-06 01:53:49 backup
+[PUSH] origin main
+
+
+[COMMIT] [AUTO] 2025-11-06 02:03:51 backup
+[PUSH] origin main
+
+
+[COMMIT] [AUTO] 2025-11-06 02:13:53 backup
+[PUSH] origin main
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 3.00 KiB | 3.00 MiB/s, done.
+Total 10 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/rlwjd5454/samboh-gpt.git
+   1c2d6c1..3cb1de3  main -> main
+branch 'main' set up to track 'origin/main'.
+
+[COMMIT] [AUTO] 2025-11-06 02:23:55 backup
+[PUSH] origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 2.60 KiB | 2.60 MiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/rlwjd5454/samboh-gpt.git
+   3cb1de3..b28caa2  main -> main
+branch 'main' set up to track 'origin/main'.
+
+[COMMIT] [AUTO] 2025-11-06 02:33:58 backup
+[PUSH] origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.05 KiB | 1.05 MiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/rlwjd5454/samboh-gpt.git
+   b28caa2..9aba9ce  main -> main
+branch 'main' set up to track 'origin/main'.
+
+[COMMIT] [AUTO] 2025-11-06 02:44:00 backup
+[PUSH] origin main
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 3.56 KiB | 3.56 MiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/rlwjd5454/samboh-gpt.git
+   9aba9ce..672cae6  main -> main
+branch 'main' set up to track 'origin/main'.
+
+[COMMIT] [AUTO] 2025-11-06 02:54:02 backup
+[PUSH] origin main
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.94 KiB | 1.94 MiB/s, done.
+Total 10 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/rlwjd5454/samboh-gpt.git
+   672cae6..9c396a4  main -> main
+branch 'main' set up to track 'origin/main'.
+**********************
+Windows PowerShell 기록 시작
+시작 시간: 20251106032220
+사용자 이름: KH-PC\KH
+RunAs 사용자: KH-PC\KH
+구성 이름: 
+Machine: KH-PC (Microsoft Windows NT 10.0.19045.0)
+호스트 응용 프로그램: powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -Command $ErrorActionPreference='Stop'; $log='C:\samboh-gpt\logs\backup_20251106.log'; Start-Transcript -Path $log -Append | Out-Null; Write-Host ('[START] ' + (Get-Date -Format 'yyyy-MM-dd HH:mm:ss')); Set-Location 'C:\samboh-gpt'; git config --global --add safe.directory 'C:\samboh-gpt' | Out-Null; if (-not (Test-Path '.git')) { Write-Host '[INIT] git init'; git init | Out-Null }; $curbr = (git symbolic-ref --short -q HEAD 2>$null); if (-not $curbr -or $curbr -ne 'main') { git checkout -B 'main' | Out-Null }; if (-not (git remote 2>$null | Select-String -Quiet '^origin$')) { Write-Host '[INIT] add origin'; git remote add origin 'https://github.com/rlwjd5454/samboh-gpt.git' | Out-Null }; if (git ls-remote --heads origin 2>$null) { try { git pull --rebase origin 'main' } catch { Write-Host '[WARN] pull skipped:' $_.Exception.Message } }; while ($true) {   git add -A | Out-Null;   git diff --cached --quiet; $changed = -not ($LASTEXITCODE -eq 0);   if (-not $changed) {     Write-Host ('[INFO] no changes at ' + (Get-Date -Format 'HH:mm:ss'));     Start-Sleep -Seconds 600;     continue;   }   $ts = Get-Date -Format 'yyyy-MM-dd HH:mm:ss';   $msg = "[AUTO] $ts backup";   Write-Host ('[COMMIT] ' + $msg);   git commit -m $msg | Out-Null;   Write-Host '[PUSH] origin main';   try { git push -u origin 'main' } catch { Write-Host '[ERROR] push failed:' $_.Exception.Message };   Start-Sleep -Seconds 600; } Stop-Transcript | Out-Null
+프로세스 ID: 2156
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+[START] 2025-11-06 03:22:20
