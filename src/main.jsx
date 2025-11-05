@@ -1,58 +1,26 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login.jsx";
-import AdminDashboard from "./pages/AdminDashboard.jsx";
 import TeacherList from "./pages/TeacherList.jsx";
-import ClassList from "./pages/ClassList.jsx";
-import "./index.css";
+import TeacherClasses from "./pages/TeacherClasses.jsx";
 
-function RequireAuth({ children }) {
-  const authed = typeof window !== "undefined" && localStorage.getItem("auth") === "admin";
-  return authed ? children : <Navigate to="/login" replace />;
-}
-
-function App() {
-  return (
+createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/login" element={<Login />} />
+        {/* 로그인 고정 */}
+        <Route path="/" element={<Login />} />
 
-        {/* 보호 구간 */}
-        <Route
-          path="/admin"
-          element={
-            <RequireAuth>
-              <AdminDashboard />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/teachers/:division"
-          element={
-            <RequireAuth>
-              <TeacherList />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/classes"
-          element={
-            <RequireAuth>
-              <ClassList />
-            </RequireAuth>
-          }
-        />
+        {/* 담임 목록: /teachers/middle 또는 /teachers/elementary */}
+        <Route path="/teachers/:division" element={<TeacherList />} />
 
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        {/* 담임 클릭 후 반 목록 우선 표시 */}
+        <Route path="/classes/:division/:teacher" element={<TeacherClasses />} />
+
+        {/* 잘못된 경로는 로그인으로 */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
   </React.StrictMode>
 );
