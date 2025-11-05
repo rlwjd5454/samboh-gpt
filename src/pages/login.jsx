@@ -21,7 +21,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-blue-100 flex flex-col items-center justify-center">
-      <img src={sambohLogo} alt="Samboh Logo" className="w-24 h-24 mb-4" />
+      <img src={sambohLogo} alt="Samboh Logo" className="w-40 h-40 mb-6" />
       <h1 className="text-3xl font-bold mb-6">Samboh</h1>
 
       <form
