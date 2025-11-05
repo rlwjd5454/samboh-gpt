@@ -16,3 +16,7 @@ WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
+[START] 2025-11-06 01:03:28
+error: cannot pull with rebase: You have
+unstaged changes.
+error: Please commit or stash them.
